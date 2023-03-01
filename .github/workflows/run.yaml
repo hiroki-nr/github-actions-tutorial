@@ -1,7 +1,12 @@
 name: learn-github-actions
-on: [push]
+on: [ push ]
 jobs:
-  check-bats-version:
+  my-job:
     runs-on: ubuntu-latest
     steps:
       - run: echo "hello github actions"
+      - uses: actions/checkout@v2
+      - run: |
+          ls -al
+          cd .github/workflows/
+          ls -al
