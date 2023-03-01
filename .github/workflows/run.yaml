@@ -5,6 +5,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "hello github actions"
+      - run: |
+          ls -al
       - uses: actions/checkout@v2
       - run: |
           ls -al
