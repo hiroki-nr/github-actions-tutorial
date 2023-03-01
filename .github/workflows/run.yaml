@@ -1,14 +1,26 @@
 name: learn-github-actions
+
 on: [ push ]
+
 jobs:
   my-job:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "hello github actions"
-      - run: |
+      - name: hello world
+        run: echo "hello github actions"
+
+      - name: ls before checkout
+        run: |
           ls -al
-      - uses: actions/checkout@v2
-      - run: |
+
+      - name: checkout
+        uses: actions/checkout@v2
+
+      - name: ls after checkout
+        run: |
           ls -al
-          cd .github/workflows/
+
+      - name: ls .github directory
+        working-directory: ./.github
+        run: |
           ls -al
