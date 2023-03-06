@@ -5,6 +5,7 @@ on: [ push ]
 jobs:
   my-job:
     runs-on: ubuntu-latest
+    environment: production
     steps:
       - name: hello world
         run: echo "hello github actions"
