@@ -25,3 +25,7 @@ jobs:
         working-directory: ./.github
         run: |
           ls -al
+
+      - name: fill environment variable
+        run : |
+          cat \<<EOF\n`cat .my_text.txt`\nEOF\n
