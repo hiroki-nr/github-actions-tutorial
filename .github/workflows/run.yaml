@@ -28,4 +28,4 @@ jobs:
 
       - name: fill environment variable
         run : |
-          cat \<<EOF\n`cat .my_text.txt`\nEOF\n
+          cat \<<EOF"\n"`cat .my_text.txt`"\n"EOF"\n"
