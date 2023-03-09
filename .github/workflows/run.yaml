@@ -28,4 +28,4 @@ jobs:
 
       - name: fill environment variable
         run : |
-          cat .my_text.txt
+          cat ./my_text.txt
